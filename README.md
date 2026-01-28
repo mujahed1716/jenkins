@@ -379,7 +379,28 @@ Check connectivity
 Update or rollback plugin
 
 ---
-
+Common Jenkins Built‑in Environment Variables
+Variable	Description
+BUILD_NUMBER	The current build number (e.g., 153).
+BUILD_ID	The build timestamp (deprecated in favor of BUILD_TAG).
+BUILD_TAG	A unique tag for the build, e.g., jenkins-${JOB_NAME}-${BUILD_NUMBER}.
+BUILD_URL	Full URL of the build, e.g., http://jenkins.example.com/job/MyJob/15/.
+JOB_NAME	Name of the job (without folder path).
+JOB_BASE_NAME	Short name of the job (last part of JOB_NAME).
+JOB_URL	Full URL of the job.
+WORKSPACE	Absolute path to the job's workspace directory.
+NODE_NAME	Name of the node/slave where the build is running (master for controller).
+NODE_LABELS	Space‑separated list of labels assigned to the node.
+EXECUTOR_NUMBER	Executor number on the node running the build.
+JENKINS_URL	Root URL of the Jenkins instance.
+GIT_COMMIT	Git commit hash that was checked out (if using Git SCM).
+GIT_BRANCH	Git branch name (if using Git SCM).
+GIT_URL	Git repository URL.
+SVN_REVISION	Subversion revision number (if using SVN SCM).
+CHANGE_ID	Pull request/change request ID (if applicable).
+CHANGE_BRANCH	Branch of the change request.
+CHANGE_TARGET	Target branch of the change request.
+BUILD_USER	User who triggered the build (requires Build User Vars Plugin).
 ## 24. Jenkins Interview Points
 
 * Difference between CI & CD
